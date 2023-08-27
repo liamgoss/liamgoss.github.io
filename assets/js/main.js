@@ -198,6 +198,30 @@
       clickable: true
     }
   });
+  // Resume preview code
+  document.addEventListener("DOMContentLoaded", function() {
+    const resumePreview = document.getElementById("resume-preview");
+    const resumePDFPath = "assets/img/Resume.pdf"; // Update this with the actual path to your resume PDF
+
+    resumePreview.addEventListener("click", function() {
+      window.open(resumePDFPath, "_blank");
+    });
+    /*
+    // Add event listener for GitHub link
+    const githubLink = document.getElementById("github-link");
+    githubLink.addEventListener("click", function() {
+      window.open("https://github.com/liamgoss", "_blank");
+    });
+
+    // Add event listener for LinkedIn link
+    const linkedinLink = document.getElementById("linkedin-link");
+    linkedinLink.addEventListener("click", function() {
+      window.open("https://www.linkedin.com/in/liamgoss", "_blank");
+    });
+    */
+  });
+
+  
 
   /**
    * Portfolio details slider
