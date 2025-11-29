@@ -27,9 +27,21 @@
   .section-container {
     display: block;
   }
+  
+  /* Fix projects grid for tablets */
   #projects .about-containers {
     grid-template-columns: 1fr;
   }
+  
+  /* Fix article layout for tablets - stack them */
+  .article-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  article {
+    padding: 1rem;
+  }
+  
   .arrow {
     display: none;
   }
@@ -48,6 +60,39 @@
   .about-containers {
     margin-top: 0;
   }
+  
+  /* Fix about section cards */
+  .about-details-container {
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Stack article items vertically on mobile */
+  article {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.2rem 1rem;
+  }
+  
+  article div {
+    text-align: center;
+  }
+  
+  /* Make grid single column on mobile */
+  .article-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  /* Stack about cards */
+  .about-containers {
+    flex-direction: column;
+  }
+  
+  .details-container {
+    margin-bottom: 1rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -59,9 +104,23 @@
     height: 83vh;
     margin-bottom: 0;
   }
+  
+  /* Ensure articles are readable on small screens */
   article {
     font-size: 1rem;
+    padding: 1rem 0.8rem;
+    flex-direction: column;
+    text-align: center;
   }
+  
+  article h3 {
+    font-size: 1rem;
+  }
+  
+  article p {
+    font-size: 0.85rem;
+  }
+  
   footer nav {
     height: fit-content;
     margin-bottom: 2rem;
@@ -94,6 +153,16 @@
     height: 46vw;
     justify-content: center;
   }
+  
+  /* Make profile pic circular on mobile */
+  .section__pic-container {
+    width: 60vw;
+    height: 60vw; /* Same as width = circle */
+    max-width: 275px;
+    max-height: 275px;
+    justify-content: center;
+  }
+  
   .section__text__p2 {
     font-size: 1.25rem;
   }
@@ -101,6 +170,60 @@
     font-size: 2rem;
   }
   .text-container {
-    text-align: justify;
+    text-align: left;
+    padding: 0 1rem;
+  }
+  
+  .text-container p {
+    text-align: left;
+    line-height: 1.6;
+  }
+  
+  /* Fix button sizing on mobile */
+  .btn {
+    padding: 0.8rem;
+    width: 7rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Make project buttons stack better */
+  .btn-container {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  /* Ensure project images scale properly */
+  #projects .project-img {
+    height: 180px;
+  }
+  
+  /* Better spacing for sections on mobile */
+  section {
+    padding-top: 2vh;
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /* Extra small phones */
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .section__text__p2 {
+    font-size: 1.1rem;
+  }
+  
+  .btn {
+    width: 6rem;
+    font-size: 0.85rem;
+  }
+  
+  article h3 {
+    font-size: 0.95rem;
+  }
+  
+  article p {
+    font-size: 0.8rem;
   }
 }
