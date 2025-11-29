@@ -27,6 +27,9 @@
   .section-container {
     display: block;
   }
+  #projects .about-containers {
+    grid-template-columns: 1fr;
+  }
   .arrow {
     display: none;
   }
