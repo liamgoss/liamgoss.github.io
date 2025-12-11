@@ -399,13 +399,14 @@ article h3, article p {
 #projects .details-container {
   display: flex;
   flex-direction: column;
-  height: auto;            /* allow full height */
+  height: 100%;            /* take full height of grid cell */
 }
 
 #projects .about-containers {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  align-items: stretch;    /* make all cards same height */
 }
 
 #projects .project-img {
@@ -443,6 +444,12 @@ article h3, article p {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 3.5rem;      /* ensure consistent title height */
+}
+
+#projects .btn-container {
+  margin-top: auto;        /* push buttons to bottom */
+  padding-top: 1rem;       /* add spacing above buttons */
 }
 
 .project-btn {
