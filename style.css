@@ -394,19 +394,34 @@ article h3, article p {
 
 #projects {
   position: relative;
+  overflow: visible;       /* allow hover effects to show */
+  padding-bottom: 2rem;    /* extra padding to prevent clipping */
 }
 
 #projects .details-container {
   display: flex;
   flex-direction: column;
-  height: 100%;            /* take full height of grid cell */
+  height: 100%;            /* fill the grid cell height */
+  position: relative;      /* establish positioning context */
+  z-index: 1;             /* ensure proper stacking */
+  box-sizing: border-box;  /* include padding in height calculation */
+  width: 100%;            /* ensure full width of grid cell */
 }
 
 #projects .about-containers {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;     /* make all rows equal height */
   gap: 2rem;
-  align-items: stretch;    /* make all cards same height */
+  align-items: stretch;    /* stretch cards to fill grid cells */
+  margin-bottom: 2rem;     /* add bottom margin to prevent overlap */
+  width: 100%;             /* ensure full width */
+}
+
+#projects .article-container {
+  margin: 0;              /* remove auto margins that could cause issues */
+  max-width: 100%;        /* ensure it fits within card */
+  width: 100%;
 }
 
 #projects .project-img {
@@ -414,17 +429,20 @@ article h3, article p {
   height: 200px;           /* uniform height constraint */
   object-fit: cover;       /* crops nicely without squishing */
   border-radius: 1rem;
+  display: block;         /* remove any inline spacing */
 }
 
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;      /* ensure proper positioning */
 }
 
 .color-container:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  z-index: 10;            /* bring hovered card to front */
 }
 /*
 .project-img {

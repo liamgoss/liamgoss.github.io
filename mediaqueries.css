@@ -32,6 +32,8 @@
   #projects .about-containers {
     grid-template-columns: 1fr;
     align-items: stretch;    /* maintain card height consistency */
+    gap: 1.5rem;             /* ensure adequate spacing */
+    margin-bottom: 2rem;     /* prevent overlap */
   }
   
   /* Fix article layout for tablets - stack them */
@@ -196,6 +198,12 @@
   /* Ensure project images scale properly */
   #projects .project-img {
     height: 180px;
+  }
+  
+  /* Ensure proper spacing for project cards on mobile */
+  #projects .about-containers {
+    gap: 1.5rem;
+    margin-bottom: 2rem;
   }
   
   /* Better spacing for sections on mobile */
