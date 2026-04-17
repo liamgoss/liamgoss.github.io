@@ -25,6 +25,12 @@
   
   </head>
   <body>
+    <div id="loader-overlay">
+      <div id="loader-terminal">
+        <pre id="loader-output"></pre>
+        <span id="loader-cursor">█</span>
+      </div>
+    </div>
     <nav id="desktop-nav">
       <div class="logo">Liam Goss</div>
       <div>
@@ -125,6 +131,9 @@
               />
               <h3>Key Roles</h3>
               <p>
+                Access Engineering Intern, <strong>Magnet Forensics</strong>
+                <br>
+                <br>
                 Software Engineering Intern, <strong>NASA JPL</strong>
                 <br>
                 <br>
@@ -151,12 +160,18 @@
             </p>
             <br>
             <p>
-              My current work centers on security research, reverse engineering, and 
-              low-level systems development. I explore iOS internals, ARM architecture, 
-              jailbreak-class exploitation techniques, and automated analysis tooling. I also 
-              develop backend systems, scrapers, and self-hosted infrastructure—from 
-              Proxmox and Docker deployments to custom Stremio add-ons and 
+              My current work centers on security research, reverse engineering, and
+              low-level systems development. I explore iOS internals, ARM architecture,
+              jailbreak-class exploitation techniques, and automated analysis tooling. I also
+              develop backend systems, scrapers, and self-hosted infrastructure—from
+              Proxmox and Docker deployments to custom Stremio add-ons and
               homelab services.
+            </p>
+            <br>
+            <p>
+              I recently joined Magnet Forensics as an Access Engineering Intern, where I develop
+              internal tooling supporting vulnerability research and reverse engineering workflows
+              on mobile platforms.
             </p>
           </div>
         </div>
@@ -349,14 +364,21 @@
         <div class="about-containers">
 
           <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-0.png"
-                alt="Project 0"
-                class="project-img"
-              />
+            <h2 class="experience-sub-title project-title">moscope</h2>
+            <p class="project-description">Mach-O static analysis and inspection toolkit written in Rust. Parses fat/thin binaries, enumerates segments, load commands, and symbols, with regex-based string extraction for reverse engineering workflows.</p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/liamgoss/moscope'"
+              >
+                Github
+              </button>
             </div>
+          </div>
+
+          <div class="details-container color-container">
             <h2 class="experience-sub-title project-title">EZRA: Ephemeral Zero-Knowledge Relay Archive</h2>
+            <p class="project-description">Privacy-preserving encrypted relay system implementing zero-knowledge architecture for secure, ephemeral data exchange.</p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -373,16 +395,9 @@
             </div>
           </div>
 
-
           <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.jpg"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
             <h2 class="experience-sub-title project-title">Automated IoT Hydroponics (Engineering Senior Project)</h2>
+            <p class="project-description">Fully automated hydroponic growing system using IoT sensors and microcontroller control for real-time environmental monitoring.</p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -394,22 +409,15 @@
                 class="btn btn-color-2"
                 onclick="window.open('./assets/AutomatedHydroponicsReport.pdf')"
               >
-              
                 Technical Report
               </button>
             </div>
           </div>
+
           <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.jpg"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">AES Side Channel Analysis </h2>
+            <h2 class="experience-sub-title project-title">AES Side Channel Analysis</h2>
+            <p class="project-description">Practical power analysis attack demonstrating cryptographic key extraction from a hardware AES implementation via side-channel leakage.</p>
             <div class="btn-container">
-              
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://youtu.be/q87cDJoIz8g'"
@@ -418,15 +426,10 @@
               </button>
             </div>
           </div>
+
           <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
             <h2 class="experience-sub-title project-title">FPGA Game Console with Real-Time Operating System</h2>
+            <p class="project-description">Custom game console built on FPGA hardware featuring a real-time operating system for multitasked gameplay and peripheral control.</p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -435,11 +438,11 @@
                 Github
               </button>
               <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://youtu.be/xw6nD55L9wc'"
-            >
-              Live Demo
-            </button>
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://youtu.be/xw6nD55L9wc'"
+              >
+                Live Demo
+              </button>
             </div>
           </div>
         </div>
